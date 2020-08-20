@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <script src="https://cdn.bootcss.com/vue/2.5.17/vue.min.js"></script>
+</head>
+<body>
+<div id="app">
+  {{msg}}
+  <p>
+    {{msg1}}
+  </p>
+</div>
+<script>
+  var arr = 'new test'
+  var app = new Vue({
+    el: '#app',
+    data: {
+      msg: 'Hello Vue!',
+      another: 'another Hello Vue!!'
+    },
+    watch: {
+      msg: function (newval, oldval) {
+        console.log('newval is:'+newval)
+        console.log('oldval is:'+oldval)
+      }
+    },
+    computed: {
+      msg1: function () {
+        return 'computed:' + this.msg + ',' + this.another + arr
+      }
+    }
+  })
+</script>
+</body>
+</html>

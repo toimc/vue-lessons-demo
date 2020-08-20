@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <script src="https://cdn.bootcss.com/vue/2.5.17/vue.min.js"></script>
+</head>
+<body>
+hello world!!
+<div id="app">
+  {{msg}}
+  <span v-bind:style="{'color':'green'}">{{msg1}}</span>
+  <p>
+    {{ count + 1 }}
+  </p>
+  <div v-html="template"></div>
+</div>
+<script>
+  new Vue({
+    el: '#app',
+    data: {
+      msg: 'Hello Vue!!',
+      msg1: 'Hello!!',
+      count: 0,
+      template: '<div style="color:red">good Vue!</div>'
+    }
+  })
+</script>
+</body>
+</html>

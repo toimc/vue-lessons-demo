@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <script src="https://cdn.bootcss.com/vue/2.5.17/vue.min.js"></script>
+</head>
+<body>
+<div id="app">
+  <div v-if="count < 0">
+    判断1：count大于0，count的值是：{{count}}
+  </div>
+  <div v-else-if="count < 0 && count > -5">
+    判断2：count的值是：{{count}}
+  </div>
+  <div v-else>
+    判断3：count的值是：{{count}}
+  </div>
+  <div v-show="count == -1">show:{{count}}</div>
+  {{msg}}
+</div>
+<script>
+  var app = new Vue({
+    el: '#app',
+    data: {
+      msg: 'Hello Vue!',
+      count: 0
+    }
+  })
+</script>
+</body>
+</html>
